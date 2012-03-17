@@ -1,5 +1,5 @@
 name: TempleTP
-main: me.squatingyeti.TempleTP.TempleTP
+main: net.yeticraft.squatingyeti.TempleTP.TempleTP
 version: 1.0
 description: >
              TempleTP
@@ -9,3 +9,18 @@ commands:
     aliases: [tt]
     description: Interact with TempleTP plugin  
     usage: "Usage: '/Temple [name]'"
+  found:
+    description: Commit found temple to memory
+    usage: "Usage: '/found [name]'"
+permissions:
+  temple.*:
+    description: Grants all the TempleTP permissions
+    children:
+      temple.tikal: true
+      temple.next: true
+  temple.tikal:
+    description: Grants permission to warp to tikal
+    default: false
+  temple.next:
+    description: Grants permission to warp to next
+    
