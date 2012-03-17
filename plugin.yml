@@ -1,0 +1,11 @@
+name: TempleTP
+main: me.squatingyeti.TempleTP.TempleTP
+version: 1.0
+description: >
+             TempleTP
+
+commands:
+  temple:
+    aliases: [tt]
+    description: Interact with TempleTP plugin  
+    usage: "Usage: '/Temple [name]'"
