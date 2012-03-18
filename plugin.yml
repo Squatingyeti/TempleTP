@@ -1,6 +1,6 @@
 name: TempleTP
 main: net.yeticraft.squatingyeti.TempleTP.TempleTP
-version: 1.0
+version: 1.5
 description: >
              TempleTP
 
@@ -17,10 +17,70 @@ permissions:
     description: Grants all the TempleTP permissions
     children:
       temple.tikal: true
-      temple.next: true
+      temple.prambanan: true
+      temple.jokhang: true
+      temple.confucion: true
+      temple.baalbek: true
+      temple.toji: true
+      temple.coba: true
+      temple.luxor: true
+      temple.beiti: true
+      temple.parthenon: true
+      temple.pantheon: true
+      temple.uppsala: true
+      temple.qorikancha: true
+      temple.cholula: true
+      temple.zahir: true
+      temple.seville: true
+      temple.srirangan: true
   temple.tikal:
     description: Grants permission to warp to tikal
     default: false
-  temple.next:
-    description: Grants permission to warp to next
-    
+  temple.prambanan:
+    description: Grants permission to warp to prambanan
+    default: false
+  temple.jokhang:
+    description: Grants permission to warp to jokhang
+    default: false
+  temple.confucian:
+    description: Grants permission to warp to confucion
+    default: false
+  temple.baalbek:
+    description: Grants permission to warp to baalbek
+    default: false
+  temple.toji:
+    description: Grants permission to warp to toji
+    default: false
+  temple.coba:
+    description: Grants permission to warp to coba
+    default: false
+  temple.luxor:
+    description: Grants permission to warp to luxor
+    default: false
+  temple.beiti:
+    description: Grants permission to warp to beiti
+    default: false
+  temple.parthenon:
+    description: Grants permission to warp to parthenon
+    default: false
+  temple.pantheon:
+    description: Grants permission to warp to pantheon
+    default: false
+  temple.uppsala:
+    description: Grants permission to warp to uppsala
+    default: false
+  temple.qorikancha:
+    description: Grants permission to warp to qorikancha
+    default: false
+  temple.cholula:
+    description: Grants permission to warp to cholula
+    default: false
+  temple.zahir:
+    description: Grants permission to warp to zahir
+    default: false
+  temple.seville:
+    description: Grants permission to warp to seville
+    default: false
+  temple.srirangan:
+    description: Grants permission to warp to srirangan
+    default: false

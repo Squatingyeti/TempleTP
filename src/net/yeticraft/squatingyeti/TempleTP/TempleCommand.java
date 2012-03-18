@@ -15,22 +15,22 @@ public class TempleCommand implements CommandExecutor {
 	enum SubCommand {
 		HELP,
 		TIKAL,
-		NEXT,
-		ANOTHER,
-		HOFF,
-		YETI,
-		A,
-		B,
-		C,
-		D,
-		E,
-		F,
-		G,
-		H,
-		I,
-		J,
-		K,
-		L,
+		PRAMBANAN,
+		JOKHANG,
+		CONFUCION,
+		BAALBEK,
+		TOJI,
+		COBA,
+		LUXOR,
+		BEITI,
+		PARTHENON,
+		PANTHEON,
+		UPPSALA,
+		QORIKANCHA,
+		CHOLULA,
+		ZAHIR,
+		SEVILLE,
+		SRIRANGAN,
 		UNKNOWN;
 		
 		private static SubCommand toSubCommand(String str) {
@@ -69,207 +69,252 @@ public class TempleCommand implements CommandExecutor {
 	  				if (!hasPermission(player,"temple.tikal")) {
 	  					player.sendMessage("You have not located this great temple");
 	  				}
-	  					else if (player.getWorld().getName().equalsIgnoreCase("Yetonia")) {
-	  						Location tikal = new Location(player.getWorld(), -22, 67, -109);
-	  						Chunk chnk = tikal.getChunk();
-	  						chnk.load();
-	  						player.teleport(tikal);
+	  					else if (player.getWorld().getName().equalsIgnoreCase("Yeticraft")) {
+	  						Location tik = new Location(player.getWorld(), -22, 67, -109);
+	  						Chunk tikchnk = tik.getChunk();
+	  						tikchnk.load();
+	  						player.teleport(tik);
 	  						player.sendMessage(ChatColor.YELLOW + "A Squatch appears");
 	  				}
 	  				else { 
 	  					player.sendMessage(ChatColor.RED + "You cannot teleport to " + args[0] + " from this world");
 	  				}
 	  				return true;
-	  			case NEXT:
-	  				if (!hasPermission(player,"temple.next")) {
+	  			case PRAMBANAN:
+	  				if (!hasPermission(player,"temple.prambanan")) {
 	  					player.sendMessage("You have not located this great temple");
 	  				}
-	  					else if (player.getWorld().getName().equalsIgnoreCase("Yetonia")) {
-	  						Location next = new Location(player.getWorld(), 3000, 67, -1375);
-	  						Chunk chnk = next.getChunk();
-	  						chnk.load();
-	  						player.teleport(next);
+	  					else if (player.getWorld().getName().equalsIgnoreCase("Yeticraft")) {
+	  						Location pra = new Location(player.getWorld(), 3000, 67, -1375);
+	  						Chunk prachnk = pra.getChunk();
+	  						prachnk.load();
+	  						player.teleport(pra);
 	  						player.sendMessage(ChatColor.YELLOW + "A Squatch appears");
 	  				}
 	  				else {
 	  					player.sendMessage(ChatColor.RED + "You cannot teleport to " + args[0] + " from this world");
 	  				}
 	  				return true;
-	  			case ANOTHER:
-	  				if (player.getWorld().getName().equalsIgnoreCase("Yeticraft")) {
-	  				Location another = new Location(player.getWorld(), 1000, 67, -1375);
-	  				Chunk chnk = another.getChunk();
-	  				chnk.load();
-	  				player.teleport(another);
-	  				player.sendMessage(ChatColor.YELLOW + "A Squatch appears");
+	  			case JOKHANG:
+	  				if (!hasPermission(player,"temple.jokhang")) {
+	  					player.sendMessage("You have not located this great temple");
+	  				}
+	  					else if (player.getWorld().getName().equalsIgnoreCase("Yeticraft")) {
+	  						Location jok = new Location(player.getWorld(), 1000, 67, -1375);
+	  						Chunk jokchnk = jok.getChunk();
+	  						jokchnk.load();
+	  						player.teleport(jok);
+	  						player.sendMessage(ChatColor.YELLOW + "A Squatch appears");
 	  				}
 	  				else {
 	  					player.sendMessage(ChatColor.RED + "You cannot teleport to " + args[0] + " from this world");
 	  				}
 	  				return true;
-	  			case HOFF:
-	  				if (player.getWorld().getName().equalsIgnoreCase("Yeticraft")) {
-	  					Location hoff = new Location(player.getWorld(), -1000, 80, -1375);
-	  					Chunk chnk = hoff.getChunk();
-		  				chnk.load();
-	  					player.teleport(hoff);
-	  					player.sendMessage(ChatColor.YELLOW + "A Squatch appears");
+	  			case CONFUCION:
+	  				if (!hasPermission(player,"temple.confucion")) {
+	  					player.sendMessage("You have not located this great temple");
+	  				}
+	  					else if (player.getWorld().getName().equalsIgnoreCase("Yeticraft")) {
+	  						Location con = new Location(player.getWorld(), -1000, 80, -1375);
+	  						Chunk conchnk = con.getChunk();
+		  					conchnk.load();
+	  						player.teleport(con);
+	  						player.sendMessage(ChatColor.YELLOW + "A Squatch appears");
 	  				}
 	  				else {
 	  					player.sendMessage(ChatColor.RED + "You cannot teleport to " + args[0] + " from this world");
 	  				}
 	  				return true;
-	  			case YETI:
-	  				if (player.getWorld().getName().equalsIgnoreCase("Yeticraft")) {
-	  					Location yeti = new Location(player.getWorld(), -3000, 80, -1375);
-	  					Chunk chnk = yeti.getChunk();
-		  				chnk.load();
-	  					player.teleport(yeti);
-	  					player.sendMessage(ChatColor.YELLOW + "A Squatch appears");
+	  			case BAALBEK:
+	  				if (!hasPermission(player,"temple.baalbek")) {
+	  					player.sendMessage("You have not located this great temple");
+	  				}
+	  					else if (player.getWorld().getName().equalsIgnoreCase("Yeticraft")) {
+	  						Location baa = new Location(player.getWorld(), -3000, 80, -1375);
+	  						Chunk baachnk = baa.getChunk();
+		  					baachnk.load();
+	  						player.teleport(baa);
+	  						player.sendMessage(ChatColor.YELLOW + "A Squatch appears");
 	  				}
 	  				else {
 	  					player.sendMessage(ChatColor.RED + "You cannot teleport to " + args[0] + " from this world");
 	  				}
 	  				return true;
-	  			case A:
-	  				if (player.getWorld().getName().equalsIgnoreCase("Yeticraft")) {
-	  					Location a = new Location(player.getWorld(), 3000, 80, -3125);
-	  					Chunk chnk = a.getChunk();
-		  				chnk.load();
-	  					player.teleport(a);
-	  					player.sendMessage(ChatColor.YELLOW + "A Squatch appears");
+	  			case TOJI:
+	  				if (!hasPermission(player,"temple.toji")) {
+	  					player.sendMessage("You have not located this great temple");
+	  				}
+	  					else if (player.getWorld().getName().equalsIgnoreCase("Yeticraft")) {
+	  						Location toj = new Location(player.getWorld(), 3000, 80, -3125);
+	  						Chunk tojchnk = toj.getChunk();
+		  					tojchnk.load();
+	  						player.teleport(toj);
+	  						player.sendMessage(ChatColor.YELLOW + "A Squatch appears");
 	  				}
 	  				else {
 	  					player.sendMessage(ChatColor.RED + "You cannot teleport to " + args[0] + " from this world");
 	  				}
 	  				return true;
-	  			case B:
-	  				if (player.getWorld().getName().equalsIgnoreCase("Yeticraft")) {
-	  					Location b = new Location(player.getWorld(), 1000, 80, -3125);
-	  					Chunk chnk = b.getChunk();
-		  				chnk.load();
-	  					player.teleport(b);
-	  					player.sendMessage(ChatColor.YELLOW + "A Squatch appears");
+	  			case COBA:
+	  				if (!hasPermission(player,"temple.coba")) {
+	  					player.sendMessage("You have not located this great temple");
+	  				}
+	  					else if (player.getWorld().getName().equalsIgnoreCase("Yeticraft")) {
+	  						Location cob = new Location(player.getWorld(), 1000, 80, -3125);
+	  						Chunk cobchnk = cob.getChunk();
+		  					cobchnk.load();
+	  						player.teleport(cob);
+	  						player.sendMessage(ChatColor.YELLOW + "A Squatch appears");
 	  				}
 	  				else {
 	  					player.sendMessage(ChatColor.RED + "You cannot teleport to " + args[0] + " from this world");
 	  				}
 	  				return true;
-	  			case C:
-	  				if (player.getWorld().getName().equalsIgnoreCase("Yeticraft")) {
-	  					Location c = new Location(player.getWorld(), -1000, 80, -3125);
-	  					Chunk chnk = c.getChunk();
-		  				chnk.load();
-	  					player.teleport(c);
-	  					player.sendMessage(ChatColor.YELLOW + "A Squatch appears");
+	  			case LUXOR:
+	  				if (!hasPermission(player,"temple.luxor")) {
+	  					player.sendMessage("You have not located this great temple");
+	  				}
+	  					else if (player.getWorld().getName().equalsIgnoreCase("Yeticraft")) {
+	  						Location lux = new Location(player.getWorld(), -1000, 80, -3125);
+	  						Chunk luxchnk = lux.getChunk();
+		  					luxchnk.load();
+	  						player.teleport(lux);
+	  						player.sendMessage(ChatColor.YELLOW + "A Squatch appears");
 	  				}
 	  				else {
 	  					player.sendMessage(ChatColor.RED + "You cannot teleport to " + args[0] + " from this world");
 	  				}
 	  				return true;
-	  			case D:
-	  				if (player.getWorld().getName().equalsIgnoreCase("Yeticraft")) {
-	  					Location d = new Location(player.getWorld(), -3000, 80, -3125);
-	  					Chunk chnk = d.getChunk();
-		  				chnk.load();
-	  					player.teleport(d);
-	  					player.sendMessage(ChatColor.YELLOW + "A Squatch appears");
+	  			case BEITI:
+	  				if (!hasPermission(player,"temple.beiti")) {
+	  					player.sendMessage("You have not located this great temple");
+	  				}
+	  					else if (player.getWorld().getName().equalsIgnoreCase("Yeticraft")) {
+	  						Location bei = new Location(player.getWorld(), -3000, 80, -3125);
+	  						Chunk beichnk = bei.getChunk();
+		  					beichnk.load();
+	  						player.teleport(bei);
+	  						player.sendMessage(ChatColor.YELLOW + "A Squatch appears");
 	  				}
 	  				else {
 	  					player.sendMessage(ChatColor.RED + "You cannot teleport to " + args[0] + " from this world");
 	  				}
 	  				return true;
-	  			case E:
-	  				if (player.getWorld().getName().equalsIgnoreCase("Yeticraft")) {
-	  					Location e = new Location(player.getWorld(), 3000, 80, 1375);
-	  					Chunk chnk = e.getChunk();
-		  				chnk.load();
-	  					player.teleport(e);
-	  					player.sendMessage(ChatColor.YELLOW + "A Squatch appears");
+	  			case PARTHENON:
+	  				if (!hasPermission(player,"temple.parthenon")) {
+	  					player.sendMessage("You have not located this great temple");
+	  				}
+	  					else if (player.getWorld().getName().equalsIgnoreCase("Yeticraft")) {
+	  						Location par = new Location(player.getWorld(), 3000, 80, 1375);
+	  						Chunk parchnk = par.getChunk();
+		  					parchnk.load();
+	  						player.teleport(par);
+	  						player.sendMessage(ChatColor.YELLOW + "A Squatch appears");
 	  				}
 	  				else {
 	  					player.sendMessage(ChatColor.RED + "You cannot teleport to " + args[0] + " from this world");
 	  				}
 	  				return true;
-	  			case F:
-	  				if (player.getWorld().getName().equalsIgnoreCase("Yeticraft")) {
-	  					Location f = new Location(player.getWorld(), 1000, 80, 1375);
-	  					Chunk chnk = f.getChunk();
-		  				chnk.load();
-	  					player.teleport(f);
-	  					player.sendMessage(ChatColor.YELLOW + "A Squatch appears");
+	  			case PANTHEON:
+	  				if (!hasPermission(player,"temple.pantheon")) {
+	  					player.sendMessage("You have not located this great temple");
+	  				}
+	  					else if (player.getWorld().getName().equalsIgnoreCase("Yeticraft")) {
+	  						Location pan = new Location(player.getWorld(), 1000, 80, 1375);
+	  						Chunk panchnk = pan.getChunk();
+		  					panchnk.load();
+	  						player.teleport(pan);
+	  						player.sendMessage(ChatColor.YELLOW + "A Squatch appears");
 	  				}
 	  				else {
 	  					player.sendMessage(ChatColor.RED + "You cannot teleport to " + args[0] + " from this world");
 	  				}
 	  				return true;
-	  			case G:
-	  				if (player.getWorld().getName().equalsIgnoreCase("Yeticraft")) {
-	  					Location g = new Location(player.getWorld(), -1000, 80, 1375);
-	  					Chunk chnk = g.getChunk();
-		  				chnk.load();
-	  					player.teleport(g);
-	  					player.sendMessage(ChatColor.YELLOW + "A Squatch appears");
+	  			case UPPSALA:
+	  				if (!hasPermission(player,"temple.uppsala")) {
+	  					player.sendMessage("You have not located this great temple");
+	  				}
+	  					else if (player.getWorld().getName().equalsIgnoreCase("Yeticraft")) {
+	  						Location upp = new Location(player.getWorld(), -1000, 80, 1375);
+	  						Chunk uppchnk = upp.getChunk();
+		  					uppchnk.load();
+	  						player.teleport(upp);
+	  						player.sendMessage(ChatColor.YELLOW + "A Squatch appears");
 	  				}
 	  				else {
 	  					player.sendMessage(ChatColor.RED + "You cannot teleport to " + args[0] + " from this world");
 	  				}
 	  				return true;
-	  			case H:
-	  				if (player.getWorld().getName().equalsIgnoreCase("Yeticraft")) {
-	  					Location h = new Location(player.getWorld(), -3000, 80, 1375);
-	  					Chunk chnk = h.getChunk();
-		  				chnk.load();
-	  					player.teleport(h);
-	  					player.sendMessage(ChatColor.YELLOW + "A Squatch appears");
+	  			case QORIKANCHA:
+	  				if (!hasPermission(player,"temple.qorikancha")) {
+	  					player.sendMessage("You have not located this great temple");
+	  				}
+	  					else if (player.getWorld().getName().equalsIgnoreCase("Yeticraft")) {
+	  						Location qor = new Location(player.getWorld(), -3000, 80, 1375);
+	  						Chunk qorchnk = qor.getChunk();
+		  					qorchnk.load();
+	  						player.teleport(qor);
+	  						player.sendMessage(ChatColor.YELLOW + "A Squatch appears");
 	  				}
 	  				else {
 	  					player.sendMessage(ChatColor.RED + "You cannot teleport to " + args[0] + " from this world");
 	  				}
 	  				return true;
-	  			case I:
-	  				if (player.getWorld().getName().equalsIgnoreCase("Yeticraft")) {
-	  					Location i = new Location(player.getWorld(), 3000, 80, 3125);
-	  					Chunk chnk = i.getChunk();
-		  				chnk.load();
-	  					player.teleport(i);
-	  					player.sendMessage(ChatColor.YELLOW + "A Squatch appears");
+	  			case CHOLULA:
+	  				if (!hasPermission(player,"temple.cholula")) {
+	  					player.sendMessage("You have not located this great temple");
+	  				}
+	  					else if (player.getWorld().getName().equalsIgnoreCase("Yeticraft")) {
+	  						Location cho = new Location(player.getWorld(), 3000, 80, 3125);
+	  						Chunk chochnk = cho.getChunk();
+		  					chochnk.load();
+	  						player.teleport(cho);
+	  						player.sendMessage(ChatColor.YELLOW + "A Squatch appears");
 	  				}
 	  				else {
 	  					player.sendMessage(ChatColor.RED + "You cannot teleport to " + args[0] + " from this world");
 	  				}
 	  				return true;
-	  			case J:
-	  				if (player.getWorld().getName().equalsIgnoreCase("Yeticraft")) {
-	  					Location j = new Location(player.getWorld(), 1000, 80, 3125);
-	  					Chunk chnk = j.getChunk();
-		  				chnk.load();
-	  					player.teleport(j);
-	  					player.sendMessage(ChatColor.YELLOW + "A Squatch appears");
+	  			case ZAHIR:
+	  				if (!hasPermission(player,"temple.zahir")) {
+	  					player.sendMessage("You have not located this great temple");
+	  				}
+	  					else if (player.getWorld().getName().equalsIgnoreCase("Yeticraft")) {
+	  						Location zah = new Location(player.getWorld(), 1000, 80, 3125);
+	  						Chunk zahchnk = zah.getChunk();
+		  					zahchnk.load();
+	  						player.teleport(zah);
+	  						player.sendMessage(ChatColor.YELLOW + "A Squatch appears");
 	  				}
 	  				else {
 	  					player.sendMessage(ChatColor.RED + "You cannot teleport to " + args[0] + " from this world");
 	  				}
 	  				return true;
-	  			case K:
-	  				if (player.getWorld().getName().equalsIgnoreCase("Yeticraft")) {
-	  					Location k = new Location(player.getWorld(), -1000, 80, 3125);
-	  					Chunk chnk = k.getChunk();
-		  				chnk.load();
-	  					player.teleport(k);
-	  					player.sendMessage(ChatColor.YELLOW + "A Squatch appears");
+	  			case SEVILLE:
+	  				if (!hasPermission(player,"temple.seville")) {
+	  					player.sendMessage("You have not located this great temple");
+	  				}
+	  					else if (player.getWorld().getName().equalsIgnoreCase("Yeticraft")) {
+	  						Location sev = new Location(player.getWorld(), -1000, 80, 3125);
+	  						Chunk sevchnk = sev.getChunk();
+		  					sevchnk.load();
+	  						player.teleport(sev);
+	  						player.sendMessage(ChatColor.YELLOW + "A Squatch appears");
 	  				}
 	  				else {
 	  					player.sendMessage(ChatColor.RED + "You cannot teleport to " + args[0] + " from this world");
 	  				}
 	  				return true;
-	  			case L:
-	  				if (player.getWorld().getName().equalsIgnoreCase("Yeticraft")) {
-	  					Location l = new Location(player.getWorld(), -3000, 80, 3125);
-	  					Chunk chnk = l.getChunk();
-		  				chnk.load();
-	  					player.teleport(l);
-	  					player.sendMessage(ChatColor.YELLOW + "A Squatch appears");
+	  			case SRIRANGAN:
+	  				if (!hasPermission(player,"temple.srirangan")) {
+	  					player.sendMessage("You have not located this great temple");
+	  				}
+	  					else if (player.getWorld().getName().equalsIgnoreCase("Yeticraft")) {
+	  						Location srir = new Location(player.getWorld(), -3000, 80, 3125);
+	  						Chunk srichnk = srir.getChunk();
+		  					srichnk.load();
+	  						player.teleport(srir);
+	  						player.sendMessage(ChatColor.YELLOW + "A Squatch appears");
 	  				}
 	  				else {
 	  					player.sendMessage(ChatColor.RED + "You cannot teleport to " + args[0] + " from this world");
