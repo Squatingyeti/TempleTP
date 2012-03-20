@@ -1,9 +1,12 @@
 package net.yeticraft.squatingyeti.TempleTP;
 
+import net.milkbowl.vault.economy.Economy;
+
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.ChatColor;
 import org.bukkit.Chunk;
 import org.bukkit.Location;
 import ru.tehkode.permissions.PermissionManager;
@@ -15,7 +18,7 @@ public class Found implements CommandExecutor {
 	}
 	
 	enum SubCommand {
-		TIKAL,
+		PARTHENON,
 		PRAMBANAN,
 		JOKHANG,
 		CONFUCION,
@@ -24,7 +27,7 @@ public class Found implements CommandExecutor {
 		COBA,
 		LUXOR,
 		BEITI,
-		PARTHENON,
+		TIKAL,
 		PANTHEON,
 		UPPSALA,
 		QORIKANCHA,
@@ -51,6 +54,8 @@ public class Found implements CommandExecutor {
 		
 		Player player = (Player) sender;
 		Location loc = player.getLocation();
+		double deposit = 100;
+		Economy economy = TempleTP.getEconomy();
 		PermissionManager pexPlayer = PermissionsEx.getPermissionManager();
 		PermissionUser pPlayer = pexPlayer.getUser(player);
 		int y = loc.getBlockY();
@@ -65,22 +70,23 @@ public class Found implements CommandExecutor {
 		}
 		
 		switch (SubCommand.toSubCommand(args[0].toUpperCase())) {
-			case TIKAL:
-				Location tik = new Location(player.getWorld(), -22, 67, -109);
-				Chunk tikchnk = tik.getChunk();
-				if(player.hasPermission("temple.tikal")){
+			case PARTHENON:
+				Location par = new Location(player.getWorld(), -22, 108, -109);
+				Chunk parchnk = par.getChunk();
+				if(player.hasPermission("temple.parthenon")){
 					player.sendMessage("This temple already knows your scent");
 				}
-				else if (y > 60 && loc.getChunk().equals(tikchnk)) {
-					player.sendMessage("Tikal has learned your scent. Return with /tt tikal");
-					pPlayer.addPermission("temple.tikal");
+				else if (y > 60 && loc.getChunk().equals(parchnk)) {
+					player.sendMessage("Parthenon has learned your scent. Return with /tt Parthenon");
+					pPlayer.addPermission("temple.parthenon");
+					economy.depositPlayer(player.getName(), deposit);
 				}
 				else {
 					player.sendMessage("Your Squatch call has gone unheard");
 				}
 				return true;
 			case PRAMBANAN:
-				Location pra = new Location(player.getWorld(), 3000, 67, -1375);
+				Location pra = new Location(player.getWorld(), 2967, 66, -1366);
 				Chunk prachnk = pra.getChunk();
 				if(player.hasPermission("temple.prambanan")){
 					player.sendMessage("This temple already knows your scent");
@@ -88,13 +94,15 @@ public class Found implements CommandExecutor {
 					else if (y > 60 && loc.getChunk().equals(prachnk)) {
 						player.sendMessage("Prambanan has learned your scent. Return with /tt Prambanan");
 						pPlayer.addPermission("temple.prambanan");
+						economy.depositPlayer(player.getName(), deposit);
+						player.sendMessage(ChatColor.GREEN + "100 " + ChatColor.WHITE + "TPs added to your account.");
 				}
 				else {
 					player.sendMessage("Your Squatch call has gone unheard");
 				}
 				return true;
 			case JOKHANG:
-				Location jok = new Location(player.getWorld(), 1000, 67, -1375);
+				Location jok = new Location(player.getWorld(), 1008, 66, -1373);
 				Chunk jokchnk = jok.getChunk();
 				if(player.hasPermission("temple.jokhang")){
 					player.sendMessage("This temple already knows your scent");
@@ -108,7 +116,7 @@ public class Found implements CommandExecutor {
 				}
 				return true;
 			case CONFUCION:
-				Location con = new Location(player.getWorld(), -1000, 80, -1375);
+				Location con = new Location(player.getWorld(), -954, 65, -1382);
 				Chunk conchnk = con.getChunk();
 				if(player.hasPermission("temple.confucion")){
 					player.sendMessage("This temple already knows your scent");
@@ -122,7 +130,7 @@ public class Found implements CommandExecutor {
 				}
 				return true;
 			case BAALBEK:
-				Location baa = new Location(player.getWorld(), -3000, 80, -1375);
+				Location baa = new Location(player.getWorld(), -3000, 66, -1383);
 				Chunk baachnk = baa.getChunk();
 				if(player.hasPermission("temple.baalbek")){
 					player.sendMessage("This temple already knows your scent");
@@ -136,7 +144,7 @@ public class Found implements CommandExecutor {
 				}
 				return true;
 			case TOJI:
-				Location toj = new Location(player.getWorld(), 3000, 80, -3125);
+				Location toj = new Location(player.getWorld(), 3034, 66, -3174);
 				Chunk tojchnk = toj.getChunk();
 				if(player.hasPermission("temple.toji")){
 					player.sendMessage("This temple already knows your scent");
@@ -150,7 +158,7 @@ public class Found implements CommandExecutor {
 				}
 				return true;
 			case COBA:
-				Location cob = new Location(player.getWorld(), 1000, 80, -3125);
+				Location cob = new Location(player.getWorld(), 1000, 66, -3124);
 				Chunk cobchnk = cob.getChunk();
 				if(player.hasPermission("temple.coba")){
 					player.sendMessage("This temple already knows your scent");
@@ -164,7 +172,7 @@ public class Found implements CommandExecutor {
 				}
 				return true;
 			case LUXOR:
-				Location lux = new Location(player.getWorld(), -1000, 80, -3125);
+				Location lux = new Location(player.getWorld(), -1000, 65, -3099);
 				Chunk luxchnk = lux.getChunk();
 				if(player.hasPermission("temple.luxor")){
 					player.sendMessage("This temple already knows your scent");
@@ -175,10 +183,10 @@ public class Found implements CommandExecutor {
 				}
 				else {
 					player.sendMessage("Your Squatch call has gone unheard");
-				}
+				} 
 				return true;
 			case BEITI:
-				Location bei = new Location(player.getWorld(), -3000, 80, -3125);
+				Location bei = new Location(player.getWorld(), -2991, 69, -3138);
 				Chunk beichnk = bei.getChunk();
 				if(player.hasPermission("temple.beiti")){
 					player.sendMessage("This temple already knows your scent");
@@ -191,22 +199,22 @@ public class Found implements CommandExecutor {
 					player.sendMessage("Your Squatch call has gone unheard");
 				}
 				return true;
-			case PARTHENON:
-				Location par = new Location(player.getWorld(), 3000, 80, 1375);
-				Chunk parchnk = par.getChunk();
-				if(player.hasPermission("temple.parthenon")){
+			case TIKAL:
+				Location tik = new Location(player.getWorld(), 3018, 66, 1362);
+				Chunk tikchnk = tik.getChunk();
+				if(player.hasPermission("temple.tikal")){
 					player.sendMessage("This temple already knows your scent");
 				}
-				else if (y > 60 && loc.getChunk().equals(parchnk)) {
-					player.sendMessage("Parthenon has learned your scent. Return with /tt Parthenon");
-					pPlayer.addPermission("temple.parthenon");
+				else if (y > 60 && loc.getChunk().equals(tikchnk)) {
+					player.sendMessage("Tikal has learned your scent. Return with /tt Tikal");
+					pPlayer.addPermission("temple.tikal");
 				}
 				else {
 					player.sendMessage("Your Squatch call has gone unheard");
 				}
 				return true;
 			case PANTHEON:
-				Location pan = new Location(player.getWorld(), 1000, 80, 1375);
+				Location pan = new Location(player.getWorld(), 1000, 70, 1375);
 				Chunk panchnk = pan.getChunk();
 				if(player.hasPermission("temple.pantheon")){
 					player.sendMessage("This temple already knows your scent");
@@ -220,7 +228,7 @@ public class Found implements CommandExecutor {
 				}
 				return true;
 			case UPPSALA:
-				Location upp = new Location(player.getWorld(), -1000, 80, 1375);
+				Location upp = new Location(player.getWorld(), -1000, 66, 1375);
 				Chunk uppchnk = upp.getChunk();
 				if(player.hasPermission("temple.uppsala")){
 					player.sendMessage("This temple already knows your scent");
@@ -234,7 +242,7 @@ public class Found implements CommandExecutor {
 				}
 				return true;
 			case QORIKANCHA:
-				Location qor = new Location(player.getWorld(), -3000, 80, 1375);
+				Location qor = new Location(player.getWorld(), -3001, 71, 1395);
 				Chunk qorchnk = qor.getChunk();
 				if(player.hasPermission("temple.qorikancha")){
 					player.sendMessage("This temple already knows your scent");
@@ -248,7 +256,7 @@ public class Found implements CommandExecutor {
 				}
 				return true;
 			case CHOLULA:
-				Location cho = new Location(player.getWorld(), 3000, 80, 3125);
+				Location cho = new Location(player.getWorld(), 3018, 71, 3094);
 				Chunk chochnk = cho.getChunk();
 				if(player.hasPermission("temple.cholula")){
 					player.sendMessage("This temple already knows your scent");
@@ -262,7 +270,7 @@ public class Found implements CommandExecutor {
 				}
 				return true;
 			case ZAHIR:
-				Location zah = new Location(player.getWorld(), 1000, 80, 3125);
+				Location zah = new Location(player.getWorld(), 973, 77, 3131);
 				Chunk zahchnk = zah.getChunk();
 				if(player.hasPermission("temple.zahir")){
 					player.sendMessage("This temple already knows your scent");
@@ -276,7 +284,7 @@ public class Found implements CommandExecutor {
 				}
 				return true;
 			case SEVILLE:
-				Location sev = new Location(player.getWorld(), -1000, 80, 3125);
+				Location sev = new Location(player.getWorld(), -957, 68, 3159);
 				Chunk sevchnk = sev.getChunk();
 				if(player.hasPermission("temple.seville")){
 					player.sendMessage("This temple already knows your scent");
@@ -290,7 +298,7 @@ public class Found implements CommandExecutor {
 				}
 				return true;
 			case SRIRANGAN:
-				Location srir = new Location(player.getWorld(), -3000, 80, 3125);
+				Location srir = new Location(player.getWorld(), -3000, 69, 3125);
 				Chunk srichnk = srir.getChunk();
 				if(player.hasPermission("temple.srirangan")){
 					player.sendMessage("This temple already knows your scent");

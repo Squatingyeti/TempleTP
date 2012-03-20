@@ -16,6 +16,8 @@ permissions:
   temple.*:
     description: Grants all the TempleTP permissions
     children:
+      temple.blue: true
+      temple.red: true
       temple.tikal: true
       temple.prambanan: true
       temple.jokhang: true
