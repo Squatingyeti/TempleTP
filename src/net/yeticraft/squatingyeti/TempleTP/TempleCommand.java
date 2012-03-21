@@ -82,7 +82,7 @@ public class TempleCommand implements CommandExecutor {
 	  				player.sendMessage(ChatColor.GRAY + "Cholula, Zahir, Seville, Srirangan");
 	  			case PARTHENON:
 	  				if (!hasPermission(player,"temple.parthenon")) {
-	  					player.sendMessage("You have not located this great temple");
+	  					player.sendMessage(ChatColor.YELLOW + "You have not located this great temple");
 	  					return true;
 	  				}
 	  				if (TempleTP.isUsingEconomy()) {
@@ -108,7 +108,7 @@ public class TempleCommand implements CommandExecutor {
 	  				return true;
 	  			case PRAMBANAN:
 	  				if (!hasPermission(player,"temple.prambanan")) {
-	  					player.sendMessage("You have not located this great temple");
+	  					player.sendMessage(ChatColor.YELLOW + "You have not located this great temple");
 	  					return true;
 	  				}
 	  				if(player.hasPermission("temple.red") && TempleTP.getEconomy().getBalance(player.getName()) >= allyTemple) {
@@ -134,7 +134,7 @@ public class TempleCommand implements CommandExecutor {
 	  				return true;
 	  			case JOKHANG:
 	  				if (!hasPermission(player,"temple.jokhang")) {
-	  					player.sendMessage("You have not located this great temple");
+	  					player.sendMessage(ChatColor.YELLOW + "You have not located this great temple");
 	  					return true;
 	  				}
 	  				if(player.hasPermission("temple.red") && TempleTP.getEconomy().getBalance(player.getName()) >= allyTemple) {
@@ -160,7 +160,7 @@ public class TempleCommand implements CommandExecutor {
 	  				return true;
 	  			case CONFUCION:
 	  				if (!hasPermission(player,"temple.confucion")) {
-	  					player.sendMessage("You have not located this great temple");
+	  					player.sendMessage(ChatColor.YELLOW + "You have not located this great temple");
 	  					return true;
 	  				}
 	  				if(player.hasPermission("temple.red") && TempleTP.getEconomy().getBalance(player.getName()) >= allyTemple) {
@@ -186,7 +186,7 @@ public class TempleCommand implements CommandExecutor {
 	  				return true;
 	  			case BAALBEK:
 	  				if (!hasPermission(player,"temple.baalbek")) {
-	  					player.sendMessage("You have not located this great temple");
+	  					player.sendMessage(ChatColor.YELLOW + "You have not located this great temple");
 	  					return true;
 	  				}
 	  				if(player.hasPermission("temple.red") && TempleTP.getEconomy().getBalance(player.getName()) >= allyTemple) {
@@ -212,7 +212,7 @@ public class TempleCommand implements CommandExecutor {
 	  				return true;
 	  			case TOJI:
 	  				if (!hasPermission(player,"temple.toji")) {
-	  					player.sendMessage("You have not located this great temple");
+	  					player.sendMessage(ChatColor.YELLOW + "You have not located this great temple");
 	  					return true;
 	  				}
 	  				if(player.hasPermission("temple.red") && TempleTP.getEconomy().getBalance(player.getName()) >= allyTemple) {
@@ -238,7 +238,7 @@ public class TempleCommand implements CommandExecutor {
 	  				return true;
 	  			case COBA:
 	  				if (!hasPermission(player,"temple.coba")) {
-	  					player.sendMessage("You have not located this great temple");
+	  					player.sendMessage(ChatColor.YELLOW + "You have not located this great temple");
 	  					return true;
 	  				}
 	  				if(player.hasPermission("temple.red") && TempleTP.getEconomy().getBalance(player.getName()) >= allyTemple) {
@@ -264,7 +264,7 @@ public class TempleCommand implements CommandExecutor {
 	  				return true;
 	  			case LUXOR:
 	  				if (!hasPermission(player,"temple.luxor")) {
-	  					player.sendMessage("You have not located this great temple");
+	  					player.sendMessage(ChatColor.YELLOW + "You have not located this great temple");
 	  					return true;
 	  				}
 	  				if(player.hasPermission("temple.red") && TempleTP.getEconomy().getBalance(player.getName()) >= allyTemple) {
@@ -290,7 +290,7 @@ public class TempleCommand implements CommandExecutor {
 	  				return true;
 	  			case BEITI:
 	  				if (!hasPermission(player,"temple.beiti")) {
-	  					player.sendMessage("You have not located this great temple");
+	  					player.sendMessage(ChatColor.YELLOW + "You have not located this great temple");
 	  					return true;
 	  				}
 	  				if(player.hasPermission("temple.red") && TempleTP.getEconomy().getBalance(player.getName()) >= allyTemple) {
@@ -316,7 +316,7 @@ public class TempleCommand implements CommandExecutor {
 	  				return true;
 	  			case TIKAL:
 	  				if (!hasPermission(player,"temple.tikal")) {
-	  					player.sendMessage("You have not located this great temple");
+	  					player.sendMessage(ChatColor.YELLOW + "You have not located this great temple");
 	  					return true;
 	  				}
 	  				if(player.hasPermission("temple.blue") && TempleTP.getEconomy().getBalance(player.getName()) >= allyTemple) {
@@ -342,7 +342,7 @@ public class TempleCommand implements CommandExecutor {
 	  				return true;
 	  			case PANTHEON:
 	  				if (!hasPermission(player,"temple.pantheon")) {
-	  					player.sendMessage("You have not located this great temple");
+	  					player.sendMessage(ChatColor.YELLOW + "You have not located this great temple");
 	  					return true;
 	  				}
 	  				if(player.hasPermission("temple.blue") && TempleTP.getEconomy().getBalance(player.getName()) >= allyTemple) {
@@ -368,7 +368,7 @@ public class TempleCommand implements CommandExecutor {
 	  				return true;
 	  			case UPPSALA:
 	  				if (!hasPermission(player,"temple.uppsala")) {
-	  					player.sendMessage("You have not located this great temple");
+	  					player.sendMessage(ChatColor.YELLOW + "You have not located this great temple");
 	  					return true;
 	  				}
 	  				if(player.hasPermission("temple.blue") && TempleTP.getEconomy().getBalance(player.getName()) >= allyTemple) {
@@ -394,7 +394,7 @@ public class TempleCommand implements CommandExecutor {
 	  				return true;
 	  			case QORIKANCHA:
 	  				if (!hasPermission(player,"temple.qorikancha")) {
-	  					player.sendMessage("You have not located this great temple");
+	  					player.sendMessage(ChatColor.YELLOW + "You have not located this great temple");
 	  					return true;
 	  				}
 	  				if(player.hasPermission("temple.blue") && TempleTP.getEconomy().getBalance(player.getName()) >= allyTemple) {
@@ -420,7 +420,7 @@ public class TempleCommand implements CommandExecutor {
 	  				return true;
 	  			case CHOLULA:
 	  				if (!hasPermission(player,"temple.cholula")) {
-	  					player.sendMessage("You have not located this great temple");
+	  					player.sendMessage(ChatColor.YELLOW + "You have not located this great temple");
 	  					return true;
 	  				}
 	  				if(player.hasPermission("temple.blue") && TempleTP.getEconomy().getBalance(player.getName()) >= allyTemple) {
@@ -446,7 +446,7 @@ public class TempleCommand implements CommandExecutor {
 	  				return true;
 	  			case ZAHIR:
 	  				if (!hasPermission(player,"temple.zahir")) {
-	  					player.sendMessage("You have not located this great temple");
+	  					player.sendMessage(ChatColor.YELLOW + "You have not located this great temple");
 	  					return true;
 	  				}
 	  				if(player.hasPermission("temple.blue") && TempleTP.getEconomy().getBalance(player.getName()) >= allyTemple) {
@@ -472,7 +472,7 @@ public class TempleCommand implements CommandExecutor {
 	  				return true;
 	  			case SEVILLE:
 	  				if (!hasPermission(player,"temple.seville")) {
-	  					player.sendMessage("You have not located this great temple");
+	  					player.sendMessage(ChatColor.YELLOW + "You have not located this great temple");
 	  					return true;
 	  				}
 	  				if(player.hasPermission("temple.blue") && TempleTP.getEconomy().getBalance(player.getName()) >= allyTemple) {
@@ -498,7 +498,7 @@ public class TempleCommand implements CommandExecutor {
 	  				return true;
 	  			case SRIRANGAN:
 	  				if (!hasPermission(player,"temple.srirangan")) {
-	  					player.sendMessage("You have not located this great temple");
+	  					player.sendMessage(ChatColor.YELLOW + "You have not located this great temple");
 	  					return true;
 	  				}
 	  				if(player.hasPermission("temple.blue") && TempleTP.getEconomy().getBalance(player.getName()) >= allyTemple) {
@@ -533,4 +533,4 @@ public class TempleCommand implements CommandExecutor {
 		return player.isOp() || player.hasPermission(perm);
 	}
 	
-	}
+}

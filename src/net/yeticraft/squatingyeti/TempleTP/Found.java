@@ -74,241 +74,241 @@ public class Found implements CommandExecutor {
 				Location par = new Location(player.getWorld(), -22, 108, -109);
 				Chunk parchnk = par.getChunk();
 				if(player.hasPermission("temple.parthenon")){
-					player.sendMessage("This temple already knows your scent");
+					player.sendMessage(ChatColor.YELLOW + "This temple already knows your scent");
 				}
 				else if (y > 60 && loc.getChunk().equals(parchnk)) {
-					player.sendMessage("Parthenon has learned your scent. Return with /tt Parthenon");
+					player.sendMessage(ChatColor.GREEN + "Parthenon"  + ChatColor.WHITE + " has learned your scent. " + ChatColor.GREEN + "Return with /tt Parthenon");
 					pPlayer.addPermission("temple.parthenon");
 					economy.depositPlayer(player.getName(), deposit);
 				}
 				else {
-					player.sendMessage("Your Squatch call has gone unheard");
+					player.sendMessage(ChatColor.YELLOW + "Your Squatch call has gone unheard");
 				}
 				return true;
 			case PRAMBANAN:
 				Location pra = new Location(player.getWorld(), 2967, 66, -1366);
 				Chunk prachnk = pra.getChunk();
 				if(player.hasPermission("temple.prambanan")){
-					player.sendMessage("This temple already knows your scent");
+					player.sendMessage(ChatColor.YELLOW + "This temple already knows your scent");
 				}
 					else if (y > 60 && loc.getChunk().equals(prachnk)) {
-						player.sendMessage("Prambanan has learned your scent. Return with /tt Prambanan");
+						player.sendMessage(ChatColor.GREEN + "Prambanan"  + ChatColor.WHITE + " has learned your scent. " + ChatColor.GREEN + "Return with /tt Prambanan");
 						pPlayer.addPermission("temple.prambanan");
 						economy.depositPlayer(player.getName(), deposit);
 						player.sendMessage(ChatColor.GREEN + "100 " + ChatColor.WHITE + "TPs added to your account.");
 				}
 				else {
-					player.sendMessage("Your Squatch call has gone unheard");
+					player.sendMessage(ChatColor.YELLOW + "Your Squatch call has gone unheard");
 				}
 				return true;
 			case JOKHANG:
 				Location jok = new Location(player.getWorld(), 1008, 66, -1373);
 				Chunk jokchnk = jok.getChunk();
 				if(player.hasPermission("temple.jokhang")){
-					player.sendMessage("This temple already knows your scent");
+					player.sendMessage(ChatColor.YELLOW + "This temple already knows your scent");
 				}
 				else if (y > 60 && loc.getChunk().equals(jokchnk)) {
-					player.sendMessage("Jokhang has learned your scent. Return with /tt Jokhang");
+					player.sendMessage(ChatColor.GREEN + "Jokhang"  + ChatColor.WHITE + " has learned your scent. " + ChatColor.GREEN + "Return with /tt Jokhang");
 					pPlayer.addPermission("temple.jokhang");
 				}
 				else {
-					player.sendMessage("Your Squatch call has gone unheard");
+					player.sendMessage(ChatColor.YELLOW + "Your Squatch call has gone unheard");
 				}
 				return true;
 			case CONFUCION:
 				Location con = new Location(player.getWorld(), -954, 65, -1382);
 				Chunk conchnk = con.getChunk();
 				if(player.hasPermission("temple.confucion")){
-					player.sendMessage("This temple already knows your scent");
+					player.sendMessage(ChatColor.YELLOW + "This temple already knows your scent");
 				}
 				else if (y > 60 && loc.getChunk().equals(conchnk)) {
-					player.sendMessage("Confucion has learned your scent. Return with /tt Confucion");
+					player.sendMessage(ChatColor.GREEN + "Confucion"  + ChatColor.WHITE + " has learned your scent." + ChatColor.GREEN + " Return with /tt Confucion");
 					pPlayer.addPermission("temple.confucion");
 				}
 				else {
-					player.sendMessage("Your Squatch call has gone unheard");
+					player.sendMessage(ChatColor.YELLOW + "Your Squatch call has gone unheard");
 				}
 				return true;
 			case BAALBEK:
 				Location baa = new Location(player.getWorld(), -3000, 66, -1383);
 				Chunk baachnk = baa.getChunk();
 				if(player.hasPermission("temple.baalbek")){
-					player.sendMessage("This temple already knows your scent");
+					player.sendMessage(ChatColor.YELLOW + "This temple already knows your scent");
 				}
 				else if (y > 60 && loc.getChunk().equals(baachnk)) {
-					player.sendMessage("Baalbek has learned your scent. Return with /tt Baalbek");
+					player.sendMessage(ChatColor.GREEN + "Baalbek" + ChatColor.WHITE + " has learned your scent." + ChatColor.GREEN + " Return with /tt Baalbek");
 					pPlayer.addPermission("temple.baalbek");
 				}
 				else {
-					player.sendMessage("Your Squatch call has gone unheard");
+					player.sendMessage(ChatColor.YELLOW + "Your Squatch call has gone unheard");
 				}
 				return true;
 			case TOJI:
 				Location toj = new Location(player.getWorld(), 3034, 66, -3174);
 				Chunk tojchnk = toj.getChunk();
 				if(player.hasPermission("temple.toji")){
-					player.sendMessage("This temple already knows your scent");
+					player.sendMessage(ChatColor.YELLOW + "This temple already knows your scent");
 				}
 				else if (y > 60 && loc.getChunk().equals(tojchnk)) {
-					player.sendMessage("Toji has learned your scent. Return with /tt Toji");
+					player.sendMessage(ChatColor.GREEN + "Toji" + ChatColor.WHITE + " has learned your scent. " + ChatColor.GREEN + "Return with /tt Toji");
 					pPlayer.addPermission("temple.toji");
 				}
 				else {
-					player.sendMessage("Your Squatch call has gone unheard");
+					player.sendMessage(ChatColor.YELLOW + "Your Squatch call has gone unheard");
 				}
 				return true;
 			case COBA:
 				Location cob = new Location(player.getWorld(), 1000, 66, -3124);
 				Chunk cobchnk = cob.getChunk();
 				if(player.hasPermission("temple.coba")){
-					player.sendMessage("This temple already knows your scent");
+					player.sendMessage(ChatColor.YELLOW + "This temple already knows your scent");
 				}
 				else if (y > 60 && loc.getChunk().equals(cobchnk)) {
-					player.sendMessage("Coba has learned your scent. Return with /tt Coba");
+					player.sendMessage(ChatColor.GREEN + "Coba" + ChatColor.WHITE + " has learned your scent. " + ChatColor.GREEN + "Return with /tt Coba");
 					pPlayer.addPermission("temple.coba");
 				}
 				else {
-					player.sendMessage("Your Squatch call has gone unheard");
+					player.sendMessage(ChatColor.YELLOW + "Your Squatch call has gone unheard");
 				}
 				return true;
 			case LUXOR:
 				Location lux = new Location(player.getWorld(), -1000, 65, -3099);
 				Chunk luxchnk = lux.getChunk();
 				if(player.hasPermission("temple.luxor")){
-					player.sendMessage("This temple already knows your scent");
+					player.sendMessage(ChatColor.YELLOW + "This temple already knows your scent");
 				}
 				else if (y > 60 && loc.getChunk().equals(luxchnk)) {
-					player.sendMessage("Luxor has learned your scent. Return with /tt Luxor");
+					player.sendMessage(ChatColor.GREEN + "Luxor" + ChatColor.WHITE + " has learned your scent. " + ChatColor.GREEN + "Return with /tt Luxor");
 					pPlayer.addPermission("temple.luxor");
 				}
 				else {
-					player.sendMessage("Your Squatch call has gone unheard");
+					player.sendMessage(ChatColor.YELLOW + "Your Squatch call has gone unheard");
 				} 
 				return true;
 			case BEITI:
 				Location bei = new Location(player.getWorld(), -2991, 69, -3138);
 				Chunk beichnk = bei.getChunk();
 				if(player.hasPermission("temple.beiti")){
-					player.sendMessage("This temple already knows your scent");
+					player.sendMessage(ChatColor.YELLOW + "This temple already knows your scent");
 				}
 				else if (y > 60 && loc.getChunk().equals(beichnk)) {
-					player.sendMessage("Beiti has learned your scent. Return with /tt Beiti");
+					player.sendMessage(ChatColor.GREEN + "Beiti" + ChatColor.WHITE + " has learned your scent. " + ChatColor.GREEN + "Return with /tt Beiti");
 					pPlayer.addPermission("temple.beiti");
 				}
 				else {
-					player.sendMessage("Your Squatch call has gone unheard");
+					player.sendMessage(ChatColor.YELLOW + "Your Squatch call has gone unheard");
 				}
 				return true;
 			case TIKAL:
 				Location tik = new Location(player.getWorld(), 3018, 66, 1362);
 				Chunk tikchnk = tik.getChunk();
 				if(player.hasPermission("temple.tikal")){
-					player.sendMessage("This temple already knows your scent");
+					player.sendMessage(ChatColor.YELLOW + "This temple already knows your scent");
 				}
 				else if (y > 60 && loc.getChunk().equals(tikchnk)) {
-					player.sendMessage("Tikal has learned your scent. Return with /tt Tikal");
+					player.sendMessage(ChatColor.GREEN + "Tikal" + ChatColor.WHITE + " has learned your scent. " + ChatColor.GREEN + "Return with /tt Tikal");
 					pPlayer.addPermission("temple.tikal");
 				}
 				else {
-					player.sendMessage("Your Squatch call has gone unheard");
+					player.sendMessage(ChatColor.YELLOW + "Your Squatch call has gone unheard");
 				}
 				return true;
 			case PANTHEON:
 				Location pan = new Location(player.getWorld(), 1000, 70, 1375);
 				Chunk panchnk = pan.getChunk();
 				if(player.hasPermission("temple.pantheon")){
-					player.sendMessage("This temple already knows your scent");
+					player.sendMessage(ChatColor.YELLOW + "This temple already knows your scent");
 				}
 				else if (y > 60 && loc.getChunk().equals(panchnk)) {
-					player.sendMessage("Pantheon has learned your scent. Return with /tt Pantheon");
+					player.sendMessage(ChatColor.GREEN + "Pantheon" + ChatColor.WHITE + " has learned your scent. " + ChatColor.GREEN + "Return with /tt Pantheon");
 					pPlayer.addPermission("temple.pantheon");
 				}
 				else {
-					player.sendMessage("Your Squatch call has gone unheard");
+					player.sendMessage(ChatColor.YELLOW + "Your Squatch call has gone unheard");
 				}
 				return true;
 			case UPPSALA:
 				Location upp = new Location(player.getWorld(), -1000, 66, 1375);
 				Chunk uppchnk = upp.getChunk();
 				if(player.hasPermission("temple.uppsala")){
-					player.sendMessage("This temple already knows your scent");
+					player.sendMessage(ChatColor.YELLOW + "This temple already knows your scent");
 				}
 				else if (y > 60 && loc.getChunk().equals(uppchnk)) {
-					player.sendMessage("Uppsala has learned your scent. Return with /tt Uppsala");
+					player.sendMessage(ChatColor.GREEN + "Uppsala" + ChatColor.WHITE + " has learned your scent. " + ChatColor.GREEN + "Return with /tt Uppsala");
 					pPlayer.addPermission("temple.uppsala");
 				}
 				else {
-					player.sendMessage("Your Squatch call has gone unheard");
+					player.sendMessage(ChatColor.YELLOW + "Your Squatch call has gone unheard");
 				}
 				return true;
 			case QORIKANCHA:
 				Location qor = new Location(player.getWorld(), -3001, 71, 1395);
 				Chunk qorchnk = qor.getChunk();
 				if(player.hasPermission("temple.qorikancha")){
-					player.sendMessage("This temple already knows your scent");
+					player.sendMessage(ChatColor.YELLOW + "This temple already knows your scent");
 				}
 				else if (y > 60 && loc.getChunk().equals(qorchnk)) {
-					player.sendMessage("Qorikancha has learned your scent. Return with /tt Qorikancha");
+					player.sendMessage(ChatColor.GREEN + "Qorikancha" + ChatColor.WHITE + " has learned your scent. " + ChatColor.GREEN + "Return with /tt Qorikancha");
 					pPlayer.addPermission("temple.qorikancha");
 				}
 				else {
-					player.sendMessage("Your Squatch call has gone unheard");
+					player.sendMessage(ChatColor.YELLOW + "Your Squatch call has gone unheard");
 				}
 				return true;
 			case CHOLULA:
 				Location cho = new Location(player.getWorld(), 3018, 71, 3094);
 				Chunk chochnk = cho.getChunk();
 				if(player.hasPermission("temple.cholula")){
-					player.sendMessage("This temple already knows your scent");
+					player.sendMessage(ChatColor.YELLOW + "This temple already knows your scent");
 				}
 				else if (y > 60 && loc.getChunk().equals(chochnk)) {
-					player.sendMessage("Cholula has learned your scent. Return with /tt Cholula");
+					player.sendMessage(ChatColor.GREEN + "Cholula" + ChatColor.WHITE + " has learned your scent. " + ChatColor.GREEN + "Return with /tt Cholula");
 					pPlayer.addPermission("temple.cholula");
 				}
 				else {
-					player.sendMessage("Your Squatch call has gone unheard");
+					player.sendMessage(ChatColor.YELLOW + "Your Squatch call has gone unheard");
 				}
 				return true;
 			case ZAHIR:
 				Location zah = new Location(player.getWorld(), 973, 77, 3131);
 				Chunk zahchnk = zah.getChunk();
 				if(player.hasPermission("temple.zahir")){
-					player.sendMessage("This temple already knows your scent");
+					player.sendMessage(ChatColor.YELLOW + "This temple already knows your scent");
 				}
 				else if (y > 60 && loc.getChunk().equals(zahchnk)) {
-					player.sendMessage("Zahir has learned your scent. Return with /tt Zahir");
+					player.sendMessage(ChatColor.GREEN + "Zahir" + ChatColor.WHITE + " has learned your scent. " + ChatColor.GREEN + "Return with /tt Zahir");
 					pPlayer.addPermission("temple.zahir");
 				}
 				else {
-					player.sendMessage("Your Squatch call has gone unheard");
+					player.sendMessage(ChatColor.YELLOW + "Your Squatch call has gone unheard");
 				}
 				return true;
 			case SEVILLE:
 				Location sev = new Location(player.getWorld(), -957, 68, 3159);
 				Chunk sevchnk = sev.getChunk();
 				if(player.hasPermission("temple.seville")){
-					player.sendMessage("This temple already knows your scent");
+					player.sendMessage(ChatColor.YELLOW + "This temple already knows your scent");
 				}
 				else if (y > 60 && loc.getChunk().equals(sevchnk)) {
-					player.sendMessage("Seville has learned your scent. Return with /tt Seville");
+					player.sendMessage(ChatColor.GREEN + "Seville" + ChatColor.WHITE + " has learned your scent. " + ChatColor.GREEN + "Return with /tt Seville");
 					pPlayer.addPermission("temple.seville");
 				}
 				else {
-					player.sendMessage("Your Squatch call has gone unheard");
+					player.sendMessage(ChatColor.YELLOW + "Your Squatch call has gone unheard");
 				}
 				return true;
 			case SRIRANGAN:
 				Location srir = new Location(player.getWorld(), -3000, 69, 3125);
 				Chunk srichnk = srir.getChunk();
 				if(player.hasPermission("temple.srirangan")){
-					player.sendMessage("This temple already knows your scent");
+					player.sendMessage(ChatColor.YELLOW + "This temple already knows your scent");
 				}
 				else if (y > 60 && loc.getChunk().equals(srichnk)) {
-					player.sendMessage("Srirangan has learned your scent. Return with /tt Srirangan");
+					player.sendMessage(ChatColor.GREEN + "Srirangan" + ChatColor.WHITE + " has learned your scent. " + ChatColor.GREEN + "Return with /tt Srirangan");
 					pPlayer.addPermission("temple.srirangan");
 				}
 				else {
-					player.sendMessage("Your Squatch call has gone unheard");
+					player.sendMessage(ChatColor.YELLOW + "Your Squatch call has gone unheard");
 				}
 				return true;
 			case UNKNOWN:
