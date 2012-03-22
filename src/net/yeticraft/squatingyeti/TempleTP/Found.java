@@ -61,11 +61,11 @@ public class Found implements CommandExecutor {
 		int y = loc.getBlockY();
 		
 		if (args.length == 0) {
-			sender.sendMessage("The great temples tried to hear you, but no names were spoken");
+			sender.sendMessage(ChatColor.YELLOW + "The great temples tried to hear you, but no names were spoken");
 			return true;
 		}
 		if (args.length >= 2) {
-			sender.sendMessage("You can only seek the blessing of 1 temple at a time");
+			sender.sendMessage(ChatColor.YELLOW + "You can only seek the blessing of 1 temple at a time");
 			return true;
 		}
 		

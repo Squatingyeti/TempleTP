@@ -2,12 +2,12 @@ package net.yeticraft.squatingyeti.TempleTP;
 
 import org.bukkit.Chunk;
 import org.bukkit.Location;
+import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.ChatColor;
-
 import net.milkbowl.vault.economy.Economy;
 
 public class TempleCommand implements CommandExecutor {
@@ -34,6 +34,7 @@ public class TempleCommand implements CommandExecutor {
 		ZAHIR,
 		SEVILLE,
 		SRIRANGAN,
+		NOOB,
 		UNKNOWN;
 		
 		private static SubCommand toSubCommand(String str) {
@@ -67,19 +68,21 @@ public class TempleCommand implements CommandExecutor {
 
 	  		switch (SubCommand.toSubCommand(args[0].toUpperCase())) {
 	  			case HELP:
+	  				sender.sendMessage(ChatColor.YELLOW + "TempleTP Help:");
 	  				sender.sendMessage(ChatColor.GRAY + "For a list of temples type:");
 	  				sender.sendMessage(ChatColor.GRAY + "/temple list");
 	  				sender.sendMessage(ChatColor.GRAY + "to teleport to a temple: /tt [name]");
 	  				return true;
 	  			case LIST:
 	  				player.sendMessage(ChatColor.YELLOW + "Red Temples:");
-	  				player.sendMessage("===================================");
+	  				player.sendMessage(ChatColor.GREEN + "===================================");
 	  				player.sendMessage(ChatColor.GRAY + "Prambanan, Jokhang, Confucion, Baalbek,");
 	  				player.sendMessage(ChatColor.GRAY + "Toji, Coba, Luxor, Beiti");
 	  				player.sendMessage(ChatColor.YELLOW + "Blue Temples:");
-	  				player.sendMessage("===================================");
+	  				player.sendMessage(ChatColor.GREEN + "===================================");
 	  				player.sendMessage(ChatColor.GRAY + "Tikal, Pantheon, Uppsala, Qorikancha,");
 	  				player.sendMessage(ChatColor.GRAY + "Cholula, Zahir, Seville, Srirangan");
+	  				return true;
 	  			case PARTHENON:
 	  				if (!hasPermission(player,"temple.parthenon")) {
 	  					player.sendMessage(ChatColor.YELLOW + "You have not located this great temple");
@@ -520,6 +523,19 @@ public class TempleCommand implements CommandExecutor {
 	  				}
 	  				else {
 	  					player.sendMessage(ChatColor.RED + "You cannot teleport to " + args[0] + " from this world");
+	  				}
+	  				return true;
+	  			case NOOB:
+	  				World yeticraft = player.getServer().getWorld("Yeticraft");
+	  				Location noob = new Location(yeticraft, -47, 96, 33);
+	  				if (player.hasPermission("temple.noob")) {
+	  					Chunk noobchnk = noob.getChunk();
+	  					noobchnk.load();
+	  					player.teleport(noob);
+	  					player.sendMessage(ChatColor.GREEN + "Check up on dem nubs");
+	  				}
+	  				else {
+	  					player.sendMessage(ChatColor.RED + "You do not have permission to go there");
 	  				}
 	  				return true;
 	  			case UNKNOWN:
