@@ -61,7 +61,7 @@ public class Found implements CommandExecutor {
 		int y = loc.getBlockY();
 		
 		if (args.length == 0) {
-			sender.sendMessage(ChatColor.YELLOW + "The great temples tried to hear you, but no names were spoken");
+			sender.sendMessage(ChatColor.YELLOW +  "The great temples tried to hear you, but no names were spoken");
 			return true;
 		}
 		if (args.length >= 2) {

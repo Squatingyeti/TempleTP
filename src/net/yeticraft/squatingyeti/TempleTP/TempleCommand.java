@@ -57,7 +57,8 @@ public class TempleCommand implements CommandExecutor {
 		Player player = (Player) sender;
 		String playerName = player.getName();
 		Economy economy = TempleTP.getEconomy();
-	  	if (args.length == 0) {
+	  	
+		if (args.length == 0) {
 	    		sender.sendMessage(ChatColor.YELLOW + "Not enough arguments. Try /temple [name]");
 				return true;
 	    	}
@@ -98,7 +99,7 @@ public class TempleCommand implements CommandExecutor {
 	  						return true;
 	  					}
 	  				}
-	  					if (player.getWorld().getName().equalsIgnoreCase("Yetonia")) {
+	  					if (player.getWorld().getName().equalsIgnoreCase("Yeticraft")) {
 	  						Location par = new Location(player.getWorld(), -22, 108, -109);
 	  						Chunk parchnk = par.getChunk();
 	  						parchnk.load();
