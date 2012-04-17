@@ -91,7 +91,7 @@ public class TempleCommand implements CommandExecutor {
 	  				}
 	  				if (TempleTP.isUsingEconomy()) {
 	  					if (TempleTP.getEconomy().getBalance(player.getName()) >= allyTemple &&
-	  							player.hasPermission("temple.blue") || player.hasPermission("temple.red")) {
+	  							player.hasPermission("temple.blue") || player.hasPermission("temple.red") || player.hasPermission("temple.almas")) {
 	  							economy.withdrawPlayer(playerName, allyTemple);
 	  					}
 	  					else {
@@ -118,7 +118,7 @@ public class TempleCommand implements CommandExecutor {
 	  				if(player.hasPermission("temple.red") && TempleTP.getEconomy().getBalance(player.getName()) >= allyTemple) {
 	  					economy.withdrawPlayer(playerName, allyTemple);
 	  				}
-	  					else if (player.hasPermission("temple.blue") && TempleTP.getEconomy().getBalance(player.getName()) >= enemyTemple) {
+	  					else if ((player.hasPermission("temple.blue") || player.hasPermission("temple.almas")) && TempleTP.getEconomy().getBalance(player.getName()) >= enemyTemple) {
 	  						economy.withdrawPlayer(playerName, enemyTemple);
 	  					}
 	  					else {
@@ -144,7 +144,7 @@ public class TempleCommand implements CommandExecutor {
 	  				if(player.hasPermission("temple.red") && TempleTP.getEconomy().getBalance(player.getName()) >= allyTemple) {
 	  					economy.withdrawPlayer(playerName, allyTemple);
 	  				}
-	  					else if (player.hasPermission("temple.blue") && TempleTP.getEconomy().getBalance(player.getName()) >= enemyTemple) {
+	  					else if ((player.hasPermission("temple.blue") || player.hasPermission("temple.almas")) && TempleTP.getEconomy().getBalance(player.getName()) >= enemyTemple) {
 	  						economy.withdrawPlayer(playerName, enemyTemple);
 	  					}
 	  					else {
@@ -170,7 +170,7 @@ public class TempleCommand implements CommandExecutor {
 	  				if(player.hasPermission("temple.red") && TempleTP.getEconomy().getBalance(player.getName()) >= allyTemple) {
 	  					economy.withdrawPlayer(playerName, allyTemple);
 	  				}
-	  					else if (player.hasPermission("temple.blue") && TempleTP.getEconomy().getBalance(player.getName()) >= enemyTemple) {
+	  					else if ((player.hasPermission("temple.blue") || player.hasPermission("temple.almas")) && TempleTP.getEconomy().getBalance(player.getName()) >= enemyTemple) {
 	  						economy.withdrawPlayer(playerName, enemyTemple);
 	  					}
 	  					else {
@@ -196,7 +196,7 @@ public class TempleCommand implements CommandExecutor {
 	  				if(player.hasPermission("temple.red") && TempleTP.getEconomy().getBalance(player.getName()) >= allyTemple) {
 	  					economy.withdrawPlayer(playerName, allyTemple);
 	  				}
-	  					else if (player.hasPermission("temple.blue") && TempleTP.getEconomy().getBalance(player.getName()) >= enemyTemple) {
+	  					else if ((player.hasPermission("temple.blue") || player.hasPermission("temple.almas")) && TempleTP.getEconomy().getBalance(player.getName()) >= enemyTemple) {
 	  						economy.withdrawPlayer(playerName, enemyTemple);
 	  					}
 	  					else {
@@ -222,7 +222,7 @@ public class TempleCommand implements CommandExecutor {
 	  				if(player.hasPermission("temple.red") && TempleTP.getEconomy().getBalance(player.getName()) >= allyTemple) {
 	  					economy.withdrawPlayer(playerName, allyTemple);
 	  				}
-	  					else if (player.hasPermission("temple.blue") && TempleTP.getEconomy().getBalance(player.getName()) >= enemyTemple) {
+	  					else if ((player.hasPermission("temple.blue") || player.hasPermission("temple.almas")) && TempleTP.getEconomy().getBalance(player.getName()) >= enemyTemple) {
 	  						economy.withdrawPlayer(playerName, enemyTemple);
 	  					}
 	  					else {
@@ -248,7 +248,7 @@ public class TempleCommand implements CommandExecutor {
 	  				if(player.hasPermission("temple.red") && TempleTP.getEconomy().getBalance(player.getName()) >= allyTemple) {
 	  					economy.withdrawPlayer(playerName, allyTemple);
 	  				}
-	  					else if (player.hasPermission("temple.blue") && TempleTP.getEconomy().getBalance(player.getName()) >= enemyTemple) {
+	  					else if ((player.hasPermission("temple.blue") || player.hasPermission("temple.almas")) && TempleTP.getEconomy().getBalance(player.getName()) >= enemyTemple) {
 	  						economy.withdrawPlayer(playerName, enemyTemple);
 	  					}
 	  					else {
@@ -274,7 +274,7 @@ public class TempleCommand implements CommandExecutor {
 	  				if(player.hasPermission("temple.red") && TempleTP.getEconomy().getBalance(player.getName()) >= allyTemple) {
 	  					economy.withdrawPlayer(playerName, allyTemple);
 	  				}
-	  					else if (player.hasPermission("temple.blue") && TempleTP.getEconomy().getBalance(player.getName()) >= enemyTemple) {
+	  					else if ((player.hasPermission("temple.blue") || player.hasPermission("temple.almas")) && TempleTP.getEconomy().getBalance(player.getName()) >= enemyTemple) {
 	  						economy.withdrawPlayer(playerName, enemyTemple);
 	  					}
 	  					else {
@@ -300,7 +300,7 @@ public class TempleCommand implements CommandExecutor {
 	  				if(player.hasPermission("temple.red") && TempleTP.getEconomy().getBalance(player.getName()) >= allyTemple) {
 	  					economy.withdrawPlayer(playerName, allyTemple);
 	  				}
-	  					else if (player.hasPermission("temple.blue") && TempleTP.getEconomy().getBalance(player.getName()) >= enemyTemple) {
+	  					else if ((player.hasPermission("temple.blue") || player.hasPermission("temple.almas")) && TempleTP.getEconomy().getBalance(player.getName()) >= enemyTemple) {
 	  						economy.withdrawPlayer(playerName, enemyTemple);
 	  					}
 	  					else {
@@ -326,7 +326,7 @@ public class TempleCommand implements CommandExecutor {
 	  				if(player.hasPermission("temple.blue") && TempleTP.getEconomy().getBalance(player.getName()) >= allyTemple) {
 	  					economy.withdrawPlayer(playerName, allyTemple);
 	  				}
-	  					else if (player.hasPermission("temple.red") && TempleTP.getEconomy().getBalance(player.getName()) >= enemyTemple) {
+	  					else if ((player.hasPermission("temple.red") || player.hasPermission("temple.almas")) && TempleTP.getEconomy().getBalance(player.getName()) >= enemyTemple) {
 	  						economy.withdrawPlayer(playerName, enemyTemple);
 	  					}
 	  					else {
@@ -352,7 +352,7 @@ public class TempleCommand implements CommandExecutor {
 	  				if(player.hasPermission("temple.blue") && TempleTP.getEconomy().getBalance(player.getName()) >= allyTemple) {
 	  					economy.withdrawPlayer(playerName, allyTemple);
 	  				}
-	  					else if (player.hasPermission("temple.red") && TempleTP.getEconomy().getBalance(player.getName()) >= enemyTemple) {
+	  					else if ((player.hasPermission("temple.red") || player.hasPermission("temple.almas")) && TempleTP.getEconomy().getBalance(player.getName()) >= enemyTemple) {
 	  						economy.withdrawPlayer(playerName, enemyTemple);
 	  					}
 	  					else {
@@ -375,10 +375,10 @@ public class TempleCommand implements CommandExecutor {
 	  					player.sendMessage(ChatColor.YELLOW + "You have not located this great temple");
 	  					return true;
 	  				}
-	  				if(player.hasPermission("temple.blue") && TempleTP.getEconomy().getBalance(player.getName()) >= allyTemple) {
+	  				if (player.hasPermission("temple.blue") && TempleTP.getEconomy().getBalance(player.getName()) >= allyTemple) {
 	  					economy.withdrawPlayer(playerName, allyTemple);
 	  				}
-	  					else if (player.hasPermission("temple.red") && TempleTP.getEconomy().getBalance(player.getName()) >= enemyTemple) {
+	  					else if ((player.hasPermission("temple.red") || player.hasPermission("temple.almas")) && TempleTP.getEconomy().getBalance(player.getName()) >= enemyTemple) {
 	  						economy.withdrawPlayer(playerName, enemyTemple);
 	  					}
 	  					else {
@@ -404,7 +404,7 @@ public class TempleCommand implements CommandExecutor {
 	  				if(player.hasPermission("temple.blue") && TempleTP.getEconomy().getBalance(player.getName()) >= allyTemple) {
 	  					economy.withdrawPlayer(playerName, allyTemple);
 	  				}
-	  					else if (player.hasPermission("temple.red") && TempleTP.getEconomy().getBalance(player.getName()) >= enemyTemple) {
+	  					else if ((player.hasPermission("temple.red") || player.hasPermission("temple.almas")) && TempleTP.getEconomy().getBalance(player.getName()) >= enemyTemple) {
 	  						economy.withdrawPlayer(playerName, enemyTemple);
 	  					}
 	  					else {
@@ -430,7 +430,7 @@ public class TempleCommand implements CommandExecutor {
 	  				if(player.hasPermission("temple.blue") && TempleTP.getEconomy().getBalance(player.getName()) >= allyTemple) {
 	  					economy.withdrawPlayer(playerName, allyTemple);
 	  				}
-	  					else if (player.hasPermission("temple.red") && TempleTP.getEconomy().getBalance(player.getName()) >= enemyTemple) {
+	  					else if ((player.hasPermission("temple.red") || player.hasPermission("temple.almas")) && TempleTP.getEconomy().getBalance(player.getName()) >= enemyTemple) {
 	  						economy.withdrawPlayer(playerName, enemyTemple);
 	  					}
 	  					else {
@@ -456,7 +456,7 @@ public class TempleCommand implements CommandExecutor {
 	  				if(player.hasPermission("temple.blue") && TempleTP.getEconomy().getBalance(player.getName()) >= allyTemple) {
 	  					economy.withdrawPlayer(playerName, allyTemple);
 	  				}
-	  					else if (player.hasPermission("temple.red") && TempleTP.getEconomy().getBalance(player.getName()) >= enemyTemple) {
+	  					else if ((player.hasPermission("temple.red") || player.hasPermission("temple.almas")) && TempleTP.getEconomy().getBalance(player.getName()) >= enemyTemple) {
 	  						economy.withdrawPlayer(playerName, enemyTemple);
 	  					}
 	  					else {
@@ -482,7 +482,7 @@ public class TempleCommand implements CommandExecutor {
 	  				if(player.hasPermission("temple.blue") && TempleTP.getEconomy().getBalance(player.getName()) >= allyTemple) {
 	  					economy.withdrawPlayer(playerName, allyTemple);
 	  				}
-	  					else if (player.hasPermission("temple.red") && TempleTP.getEconomy().getBalance(player.getName()) >= enemyTemple) {
+	  					else if ((player.hasPermission("temple.red") || player.hasPermission("temple.almas")) && TempleTP.getEconomy().getBalance(player.getName()) >= enemyTemple) {
 	  						economy.withdrawPlayer(playerName, enemyTemple);
 	  					}
 	  					else {
@@ -508,7 +508,7 @@ public class TempleCommand implements CommandExecutor {
 	  				if(player.hasPermission("temple.blue") && TempleTP.getEconomy().getBalance(player.getName()) >= allyTemple) {
 	  					economy.withdrawPlayer(playerName, allyTemple);
 	  				}
-	  					else if (player.hasPermission("temple.red") && TempleTP.getEconomy().getBalance(player.getName()) >= enemyTemple) {
+	  					else if ((player.hasPermission("temple.red") || player.hasPermission("temple.almas")) && TempleTP.getEconomy().getBalance(player.getName()) >= enemyTemple) {
 	  						economy.withdrawPlayer(playerName, enemyTemple);
 	  					}
 	  					else {

@@ -80,6 +80,7 @@ public class Found implements CommandExecutor {
 					player.sendMessage(ChatColor.GREEN + "Parthenon"  + ChatColor.WHITE + " has learned your scent. " + ChatColor.GREEN + "Return with /tt Parthenon");
 					pPlayer.addPermission("temple.parthenon");
 					economy.depositPlayer(player.getName(), deposit);
+					player.sendMessage(ChatColor.GREEN + "100 " + ChatColor.WHITE + "TPs added to your account.");
 				}
 				else {
 					player.sendMessage(ChatColor.YELLOW + "Your Squatch call has gone unheard");
@@ -110,6 +111,8 @@ public class Found implements CommandExecutor {
 				else if (y > 60 && loc.getChunk().equals(jokchnk)) {
 					player.sendMessage(ChatColor.GREEN + "Jokhang"  + ChatColor.WHITE + " has learned your scent. " + ChatColor.GREEN + "Return with /tt Jokhang");
 					pPlayer.addPermission("temple.jokhang");
+					economy.depositPlayer(player.getName(), deposit);
+					player.sendMessage(ChatColor.GREEN + "100 " + ChatColor.WHITE + "TPs added to your account.");
 				}
 				else {
 					player.sendMessage(ChatColor.YELLOW + "Your Squatch call has gone unheard");
@@ -124,6 +127,8 @@ public class Found implements CommandExecutor {
 				else if (y > 60 && loc.getChunk().equals(conchnk)) {
 					player.sendMessage(ChatColor.GREEN + "Confucion"  + ChatColor.WHITE + " has learned your scent." + ChatColor.GREEN + " Return with /tt Confucion");
 					pPlayer.addPermission("temple.confucion");
+					economy.depositPlayer(player.getName(), deposit);
+					player.sendMessage(ChatColor.GREEN + "100 " + ChatColor.WHITE + "TPs added to your account.");
 				}
 				else {
 					player.sendMessage(ChatColor.YELLOW + "Your Squatch call has gone unheard");
@@ -138,6 +143,8 @@ public class Found implements CommandExecutor {
 				else if (y > 60 && loc.getChunk().equals(baachnk)) {
 					player.sendMessage(ChatColor.GREEN + "Baalbek" + ChatColor.WHITE + " has learned your scent." + ChatColor.GREEN + " Return with /tt Baalbek");
 					pPlayer.addPermission("temple.baalbek");
+					economy.depositPlayer(player.getName(), deposit);
+					player.sendMessage(ChatColor.GREEN + "100 " + ChatColor.WHITE + "TPs added to your account.");
 				}
 				else {
 					player.sendMessage(ChatColor.YELLOW + "Your Squatch call has gone unheard");
@@ -152,6 +159,8 @@ public class Found implements CommandExecutor {
 				else if (y > 60 && loc.getChunk().equals(tojchnk)) {
 					player.sendMessage(ChatColor.GREEN + "Toji" + ChatColor.WHITE + " has learned your scent. " + ChatColor.GREEN + "Return with /tt Toji");
 					pPlayer.addPermission("temple.toji");
+					economy.depositPlayer(player.getName(), deposit);
+					player.sendMessage(ChatColor.GREEN + "100 " + ChatColor.WHITE + "TPs added to your account.");
 				}
 				else {
 					player.sendMessage(ChatColor.YELLOW + "Your Squatch call has gone unheard");
@@ -166,6 +175,8 @@ public class Found implements CommandExecutor {
 				else if (y > 60 && loc.getChunk().equals(cobchnk)) {
 					player.sendMessage(ChatColor.GREEN + "Coba" + ChatColor.WHITE + " has learned your scent. " + ChatColor.GREEN + "Return with /tt Coba");
 					pPlayer.addPermission("temple.coba");
+					economy.depositPlayer(player.getName(), deposit);
+					player.sendMessage(ChatColor.GREEN + "100 " + ChatColor.WHITE + "TPs added to your account.");
 				}
 				else {
 					player.sendMessage(ChatColor.YELLOW + "Your Squatch call has gone unheard");
@@ -180,6 +191,8 @@ public class Found implements CommandExecutor {
 				else if (y > 60 && loc.getChunk().equals(luxchnk)) {
 					player.sendMessage(ChatColor.GREEN + "Luxor" + ChatColor.WHITE + " has learned your scent. " + ChatColor.GREEN + "Return with /tt Luxor");
 					pPlayer.addPermission("temple.luxor");
+					economy.depositPlayer(player.getName(), deposit);
+					player.sendMessage(ChatColor.GREEN + "100 " + ChatColor.WHITE + "TPs added to your account.");
 				}
 				else {
 					player.sendMessage(ChatColor.YELLOW + "Your Squatch call has gone unheard");
@@ -194,6 +207,8 @@ public class Found implements CommandExecutor {
 				else if (y > 60 && loc.getChunk().equals(beichnk)) {
 					player.sendMessage(ChatColor.GREEN + "Beiti" + ChatColor.WHITE + " has learned your scent. " + ChatColor.GREEN + "Return with /tt Beiti");
 					pPlayer.addPermission("temple.beiti");
+					economy.depositPlayer(player.getName(), deposit);
+					player.sendMessage(ChatColor.GREEN + "100 " + ChatColor.WHITE + "TPs added to your account.");
 				}
 				else {
 					player.sendMessage(ChatColor.YELLOW + "Your Squatch call has gone unheard");
@@ -208,6 +223,8 @@ public class Found implements CommandExecutor {
 				else if (y > 60 && loc.getChunk().equals(tikchnk)) {
 					player.sendMessage(ChatColor.GREEN + "Tikal" + ChatColor.WHITE + " has learned your scent. " + ChatColor.GREEN + "Return with /tt Tikal");
 					pPlayer.addPermission("temple.tikal");
+					economy.depositPlayer(player.getName(), deposit);
+					player.sendMessage(ChatColor.GREEN + "100 " + ChatColor.WHITE + "TPs added to your account.");
 				}
 				else {
 					player.sendMessage(ChatColor.YELLOW + "Your Squatch call has gone unheard");
@@ -222,6 +239,8 @@ public class Found implements CommandExecutor {
 				else if (y > 60 && loc.getChunk().equals(panchnk)) {
 					player.sendMessage(ChatColor.GREEN + "Pantheon" + ChatColor.WHITE + " has learned your scent. " + ChatColor.GREEN + "Return with /tt Pantheon");
 					pPlayer.addPermission("temple.pantheon");
+					economy.depositPlayer(player.getName(), deposit);
+					player.sendMessage(ChatColor.GREEN + "100 " + ChatColor.WHITE + "TPs added to your account.");
 				}
 				else {
 					player.sendMessage(ChatColor.YELLOW + "Your Squatch call has gone unheard");
@@ -236,6 +255,8 @@ public class Found implements CommandExecutor {
 				else if (y > 60 && loc.getChunk().equals(uppchnk)) {
 					player.sendMessage(ChatColor.GREEN + "Uppsala" + ChatColor.WHITE + " has learned your scent. " + ChatColor.GREEN + "Return with /tt Uppsala");
 					pPlayer.addPermission("temple.uppsala");
+					economy.depositPlayer(player.getName(), deposit);
+					player.sendMessage(ChatColor.GREEN + "100 " + ChatColor.WHITE + "TPs added to your account.");
 				}
 				else {
 					player.sendMessage(ChatColor.YELLOW + "Your Squatch call has gone unheard");
@@ -250,6 +271,8 @@ public class Found implements CommandExecutor {
 				else if (y > 60 && loc.getChunk().equals(qorchnk)) {
 					player.sendMessage(ChatColor.GREEN + "Qorikancha" + ChatColor.WHITE + " has learned your scent. " + ChatColor.GREEN + "Return with /tt Qorikancha");
 					pPlayer.addPermission("temple.qorikancha");
+					economy.depositPlayer(player.getName(), deposit);
+					player.sendMessage(ChatColor.GREEN + "100 " + ChatColor.WHITE + "TPs added to your account.");
 				}
 				else {
 					player.sendMessage(ChatColor.YELLOW + "Your Squatch call has gone unheard");
@@ -264,6 +287,8 @@ public class Found implements CommandExecutor {
 				else if (y > 60 && loc.getChunk().equals(chochnk)) {
 					player.sendMessage(ChatColor.GREEN + "Cholula" + ChatColor.WHITE + " has learned your scent. " + ChatColor.GREEN + "Return with /tt Cholula");
 					pPlayer.addPermission("temple.cholula");
+					economy.depositPlayer(player.getName(), deposit);
+					player.sendMessage(ChatColor.GREEN + "100 " + ChatColor.WHITE + "TPs added to your account.");
 				}
 				else {
 					player.sendMessage(ChatColor.YELLOW + "Your Squatch call has gone unheard");
@@ -278,6 +303,8 @@ public class Found implements CommandExecutor {
 				else if (y > 60 && loc.getChunk().equals(zahchnk)) {
 					player.sendMessage(ChatColor.GREEN + "Zahir" + ChatColor.WHITE + " has learned your scent. " + ChatColor.GREEN + "Return with /tt Zahir");
 					pPlayer.addPermission("temple.zahir");
+					economy.depositPlayer(player.getName(), deposit);
+					player.sendMessage(ChatColor.GREEN + "100 " + ChatColor.WHITE + "TPs added to your account.");
 				}
 				else {
 					player.sendMessage(ChatColor.YELLOW + "Your Squatch call has gone unheard");
@@ -292,6 +319,8 @@ public class Found implements CommandExecutor {
 				else if (y > 60 && loc.getChunk().equals(sevchnk)) {
 					player.sendMessage(ChatColor.GREEN + "Seville" + ChatColor.WHITE + " has learned your scent. " + ChatColor.GREEN + "Return with /tt Seville");
 					pPlayer.addPermission("temple.seville");
+					economy.depositPlayer(player.getName(), deposit);
+					player.sendMessage(ChatColor.GREEN + "100 " + ChatColor.WHITE + "TPs added to your account.");
 				}
 				else {
 					player.sendMessage(ChatColor.YELLOW + "Your Squatch call has gone unheard");
@@ -306,6 +335,8 @@ public class Found implements CommandExecutor {
 				else if (y > 60 && loc.getChunk().equals(srichnk)) {
 					player.sendMessage(ChatColor.GREEN + "Srirangan" + ChatColor.WHITE + " has learned your scent. " + ChatColor.GREEN + "Return with /tt Srirangan");
 					pPlayer.addPermission("temple.srirangan");
+					economy.depositPlayer(player.getName(), deposit);
+					player.sendMessage(ChatColor.GREEN + "100 " + ChatColor.WHITE + "TPs added to your account.");
 				}
 				else {
 					player.sendMessage(ChatColor.YELLOW + "Your Squatch call has gone unheard");

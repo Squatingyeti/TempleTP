@@ -4,6 +4,7 @@ import java.util.logging.Logger;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.command.CommandExecutor;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.RegisteredServiceProvider;
 
@@ -24,12 +25,13 @@ public class TempleTP extends JavaPlugin {
 	public void onEnable() {
 		log.info("TempleTP has been enabled");
 		
-		// hand commands over to TempleCommand & Found
+		// hand commands over to TempleCommand, Found, and Summon
 		CommandExecutor TempleCommandExecutor = new TempleCommand(this);
 		CommandExecutor FoundExecutor = new Found(this);
 		getCommand("temple").setExecutor(TempleCommandExecutor);
     	getCommand("tt").setExecutor(TempleCommandExecutor);
     	getCommand("found").setExecutor(FoundExecutor);
+    	getCommand("summon").setExecutor(new Summon(this));
     	initializeVault();
 	}
 	
@@ -76,4 +78,25 @@ public class TempleTP extends JavaPlugin {
 			usingVault = false;
 		}
 	}
+	
+	
+	public Player findOnlinePlayer(String name) {
+			if (name != null) {
+				Player p = getServer().getPlayer(name);
+				if (p != null) return p;
+				//try to find by partial name
+				Boolean found = false;
+				int nameLength = name.length();
+				for (Player p1: getServer().getOnlinePlayers()) {
+					if (p1.getName().length() > nameLength) {
+						if (p1.getName().substring(0, (nameLength - 1)).equalsIgnoreCase(name)) {
+							//return null if more than 1 player matches
+							if (found) return null;
+							found = true;
+							p = p1;
+						}
+					}	
+				} return p;
+			} return null;
+		}
 }

@@ -12,10 +12,14 @@ commands:
   found:
     description: Commit found temple to memory
     usage: "Usage: '/found [name]'"
+  summon:
+    description: summon another player to your temple location
+    usage: </command> [playername]
 permissions:
   temple.*:
     description: Grants all the TempleTP permissions
     children:
+      temple.almas: true
       temple.noob: true
       temple.blue: true
       temple.red: true
@@ -87,3 +91,12 @@ permissions:
   temple.srirangan:
     description: Grants permission to warp to srirangan
     default: false
+  temple.red:
+    description: Allies you with the red faction temples
+    default: false
+  temple.blue:
+    description: Allies you with the blue faction temples
+    default: false
+  temple.almas:
+    description: Allies you with no temples
+    default: false 
