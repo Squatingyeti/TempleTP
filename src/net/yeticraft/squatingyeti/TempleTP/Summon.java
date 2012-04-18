@@ -80,7 +80,7 @@ public class Summon implements CommandExecutor {
 			player.getLocation().getChunk().equals(tikchnk) || player.getLocation().getChunk().equals(panchnk) || player.getLocation().getChunk().equals(uppchnk) ||
 			player.getLocation().getChunk().equals(qorchnk) || player.getLocation().getChunk().equals(chochnk) || player.getLocation().getChunk().equals(zahchnk) ||
 			player.getLocation().getChunk().equals(sevchnk) || player.getLocation().getChunk().equals(srichnk))) {
-			player.sendMessage("You must be at a temple to summon");
+			player.sendMessage(ChatColor.YELLOW + "You must be at a temple to summon");
 			return true;
 		}
 		if (target == null) {

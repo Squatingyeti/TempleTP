@@ -73,6 +73,8 @@ public class TempleCommand implements CommandExecutor {
 	  				sender.sendMessage(ChatColor.GRAY + "For a list of temples type:");
 	  				sender.sendMessage(ChatColor.GRAY + "/temple list");
 	  				sender.sendMessage(ChatColor.GRAY + "to teleport to a temple: /tt [name]");
+	  				sender.sendMessage(ChatColor.GRAY + "to summon another player: /summon [player]");
+	  				sender.sendMessage(ChatColor.GRAY + "Both players must be at a temple in order for summon to work");
 	  				return true;
 	  			case LIST:
 	  				player.sendMessage(ChatColor.YELLOW + "Red Temples:");
